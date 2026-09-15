@@ -5,6 +5,25 @@ This repository contains experiments for 3D glioma MRI segmentation with central
 The project is based on four MRI modalities: **T1, T1ce, T2, and FLAIR**. Segmentation is evaluated with the standard BraTS regions **WT**, **TC**, and **ET**.
 
 ## Results
+### 3D Ground Truth and Prediction Rotations
+
+The three GIFs below show three different MRI cases. Within each GIF, the same case is rendered in sequence as:
+
+**Ground Truth → Centralized S32 → FedAvg S32 → FedProx S32**
+
+Each stage is shown as a full 360° 3D cutaway rotation. The colors correspond to the BraTS WT, TC, and ET regions, which makes it possible to compare the reference segmentation with predictions from the three models from multiple viewing angles.
+
+<p align="center">
+  <img src="assets/readme/a.gif" width="33%" alt="Ground truth and model predictions for MRI case 1">
+  <img src="assets/readme/b.gif" width="33%" alt="Ground truth and model predictions for MRI case 2">
+  <img src="assets/readme/c.gif" width="33%" alt="Ground truth and model predictions for MRI case 3">
+</p>
+
+<p align="center">
+  <em>Three MRI cases. Each GIF shows Ground Truth followed by Centralized S32, FedAvg S32, and FedProx S32 predictions.</em>
+</p>
+
+The same renderer is also used for fixed-camera Z-sweep visualizations.
 
 ### Held-out segmentation
 
@@ -24,29 +43,9 @@ The held-out test split contains 211 patients from four source domains.
 
 The figure below shows one held-out case from each source domain. The columns contain FLAIR, ground truth, and predictions from the three models.
 
-<p align="center">
-  <img src="assets/readme/qualitative_segmentation.png" width="100%" alt="Held-out segmentation examples">
+<p align="left">
+  <img src="assets/readme/qualitative_segmentation.png" width="78%" alt="Held-out segmentation examples">
 </p>
-
-## 3D Ground Truth and Prediction Rotations
-
-The three GIFs below show three different MRI cases. Within each GIF, the same case is rendered in sequence as:
-
-**Ground Truth → Centralized S32 → FedAvg S32 → FedProx S32**
-
-Each stage is shown as a full 360° 3D cutaway rotation. The colors correspond to the BraTS WT, TC, and ET regions, which makes it possible to compare the reference segmentation with predictions from the three models from multiple viewing angles.
-
-<p align="center">
-  <img src="assets/readme/a.gif" width="32%" alt="Ground truth and model predictions for MRI case 1">
-  <img src="assets/readme/b.gif" width="32%" alt="Ground truth and model predictions for MRI case 2">
-  <img src="assets/readme/c.gif" width="32%" alt="Ground truth and model predictions for MRI case 3">
-</p>
-
-<p align="center">
-  <em>Three MRI cases. Each GIF shows Ground Truth followed by Centralized S32, FedAvg S32, and FedProx S32 predictions.</em>
-</p>
-
-The same renderer is also used for fixed-camera Z-sweep visualizations.
 
 ## Patient Retrieval
 
@@ -74,7 +73,7 @@ At `k = 5`, the observed phenotype-distance results were:
 Lower values are better for these distance metrics. All three embedding models also outperformed the domain-matched random baseline on the four primary distance metrics.
 
 <p align="left">
-  <img src="assets/readme/retrieval_vs_random.png" width="92%" alt="Retrieval versus domain-matched random baseline">
+  <img src="assets/readme/retrieval_vs_random.png" width="78%" alt="Retrieval versus domain-matched random baseline">
 </p>
 
 ## Repository Layout
@@ -153,15 +152,19 @@ The experiments use the **RSNA-ASNR-MICCAI-BraTS-2021** dataset hosted by The Ca
 - Dataset: [RSNA-ASNR-MICCAI-BraTS-2021](https://www.cancerimagingarchive.net/analysis-result/rsna-asnr-miccai-brats-2021/)
 - DOI: [10.7937/jc8x-9874](https://doi.org/10.7937/jc8x-9874)
 
-The TCIA release contains multi-institutional glioma MRI with T1, contrast-enhanced T1, T2, and T2-FLAIR volumes together with manually generated tumor segmentations. This project uses a local manifest to select the source domains and define the train/validation/test split; the dataset itself is not redistributed here.
+The BraTS 2021 TCIA release combines data associated with several source
+collections, including TCGA-GBM, TCGA-LGG, UPENN-GBM, UCSF-PDGM,
+IvyGAP, ACRIN-FMISO-Brain, and CPTAC-GBM.
 
-The notebooks expect a manifest similar to:
+This project uses a four-domain subset:
 
-```text
-data/processed/manifest_4clients_seed42.csv
-```
+- TCGA-GBM
+- TCGA-LGG
+- UCSF-PDGM
+- UPENN-GBM
 
-with patient IDs, source-domain labels, split information, and local paths to T1, T1ce, T2, FLAIR, and segmentation NIfTI files.
+These source-domain labels are used as simulated federated clients and for
+stratified evaluation.
 
 ## Tests
 
