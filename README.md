@@ -16,7 +16,7 @@ The held-out test split contains 211 patients from four source domains.
 | FedAvg S32 | 0.9127 | 0.9051 | 0.8719 | 0.8966 |
 | FedProx S32 | 0.9091 | 0.9020 | 0.8628 | 0.8913 |
 
-<p align="center">
+<p align="left">
   <img src="assets/readme/heldout_test_dice.png" width="78%" alt="Held-out test Dice comparison">
 </p>
 
@@ -73,7 +73,7 @@ At `k = 5`, the observed phenotype-distance results were:
 
 Lower values are better for these distance metrics. All three embedding models also outperformed the domain-matched random baseline on the four primary distance metrics.
 
-<p align="center">
+<p align="left">
   <img src="assets/readme/retrieval_vs_random.png" width="92%" alt="Retrieval versus domain-matched random baseline">
 </p>
 
