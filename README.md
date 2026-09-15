@@ -179,6 +179,4 @@ They cover label remapping, crop/coordinate helpers, segmentation metrics, feder
 - The retrieval stage is an image-derived nearest-neighbor experiment; it is not a longitudinal patient simulator or a clinical decision system.
 - The project is intended for research and experimentation, not clinical use.
 
-## Related Paper
 
-The experiments correspond to the study **“Federated Segmentation Encoders for Image-Derived Static Digital Twin Retrieval in Multi-Domain Glioma MRI.”**
