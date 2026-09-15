@@ -9,7 +9,7 @@ The project is based on four MRI modalities: **T1, T1ce, T2, and FLAIR**. Segmen
 
 The three GIFs below show three different MRI cases. Within each GIF, the same case is rendered in sequence as:
 
-**Ground Truth → Centralized S32 → FedAvg S32 → FedProx S32**
+**Ground Truth -> Centralized S32 -> FedAvg S32 -> FedProx S32**
 
 Each stage is shown as a full 360° 3D cutaway rotation. The colors correspond to the BraTS WT, TC, and ET regions, which makes it possible to compare the reference segmentation with predictions from the three models from multiple viewing angles.
 
