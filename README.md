@@ -14,9 +14,7 @@ The three GIFs below show three different MRI cases. Within each GIF, the same c
 Each stage is shown as a full 360° 3D cutaway rotation. The colors correspond to the BraTS WT, TC, and ET regions, which makes it possible to compare the reference segmentation with predictions from the three models from multiple viewing angles.
 
 <p align="center">
-  <img src="assets/readme/a.gif" width="33%" alt="Ground truth and model predictions for MRI case 1">
-  <img src="assets/readme/b.gif" width="33%" alt="Ground truth and model predictions for MRI case 2">
-  <img src="assets/readme/c.gif" width="33%" alt="Ground truth and model predictions for MRI case 3">
+  <img src="assets/readme/a.gif" width="33%" alt="Ground truth and model predictions for MRI case 1"><img src="assets/readme/b.gif" width="33%" alt="Ground truth and model predictions for MRI case 2"><img src="assets/readme/c.gif" width="33%" alt="Ground truth and model predictions for MRI case 3">
 </p>
 
 <p align="center">
