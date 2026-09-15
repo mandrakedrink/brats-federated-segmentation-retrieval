@@ -1,0 +1,3 @@
+patient_id,client_domain,split,dice_WT,dice_TC,dice_ET,gt_WT_vox,gt_TC_vox,gt_ET_vox,pred_WT_vox,pred_TC_vox,pred_ET_vox,abs_WT_vox_error,abs_TC_vox_error,abs_ET_vox_error,pred_to_gt_ET_ratio,gt_ET_size_bin,has_gt_ET,has_pred_ET
+BraTS2021_01491,TCGA-LGG,test,0.9076223030217583,0.6374455733063233,3.937007858515717e-09,23844,21004,0,22087,10001,254,1757,11003,254,,0,False,True
+BraTS2021_01477,TCGA-LGG,test,0.9588590510088809,0.756532488687154,9.259259173525378e-09,195433,77985,0,204655,110496,108,9222,32511,108,,0,False,True

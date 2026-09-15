@@ -1,0 +1,4 @@
+experiment_key,experiment_name,n_rows,n_unique_patients,n_duplicate_rows,expected_split,observed_splits,n_test_rows,all_rows_are_expected_split,dice_min,dice_max,min_volume_or_error,n_domains,domains
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,211,211,0,test,test,211,True,1.986097318374161e-10,1.0,0.0,4,"TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,211,211,0,test,test,211,True,3.495892326394131e-11,1.0,0.0,4,"TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,211,211,0,test,test,211,True,3.495892326394131e-11,1.0,0.0,4,"TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"

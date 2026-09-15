@@ -1,0 +1,72 @@
+{
+  "cfg": {
+    "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+    "source_08c_dir": "docs/08c_predicted_mask_roi_embedding_retrieval_test",
+    "output_dir": "docs/08d_predicted_roi_random_and_domain_matched_baselines_test",
+    "seed": 42,
+    "n_random_repeats": 1000,
+    "domain_specific_repeats": 500,
+    "top_k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "expected_n_cases": 211,
+    "metric_cols": [
+      "same_domain_rate",
+      "cross_domain_rate",
+      "same_ET_presence_rate",
+      "mean_abs_log1p_WT_diff",
+      "mean_abs_log1p_TC_diff",
+      "mean_abs_log1p_ET_diff",
+      "mean_tumor_feature_z_distance",
+      "mean_WT_centroid_distance",
+      "mean_TC_centroid_distance",
+      "mean_ET_centroid_distance"
+    ],
+    "primary_retrieval_space": "embedding",
+    "primary_k": 5,
+    "baseline_types": [
+      "global_random",
+      "same_domain_random_strict",
+      "domain_distribution_matched_random"
+    ]
+  },
+  "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+  "output_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/08d_predicted_roi_random_and_domain_matched_baselines_test",
+  "source_08c_paths": {
+    "eval_patient_list": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/01_eval_patient_list.csv",
+    "features": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/03_gt_tumor_phenotype_features.csv",
+    "neighbors": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/09_pred_roi_topk_neighbors_long.csv",
+    "query_metrics": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/10_pred_roi_query_level_retrieval_metrics.csv",
+    "overall_metrics": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/11_pred_roi_overall_retrieval_metrics.csv",
+    "domain_metrics": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/12_pred_roi_domain_stratified_retrieval_metrics.csv",
+    "center_diagnostics_overall": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/13_pred_roi_center_diagnostics_overall.csv",
+    "center_diagnostics_by_domain": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/14_pred_roi_center_diagnostics_by_domain.csv",
+    "source_08c_checks": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/19_output_checks.csv",
+    "tumor_feature_z": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/embeddings/tumor_feature_z.npy",
+    "tumor_feature_raw_features": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/embeddings/tumor_feature_raw_features.csv"
+  },
+  "optional_source_08c_paths": {
+    "pred_roi_vs_gt_roi_comparison": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/15_pred_roi_vs_gt_roi_overall_comparison.csv",
+    "paper_pred_roi_embedding_k5_summary": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables/17_paper_pred_roi_embedding_k5_summary.csv"
+  },
+  "checks": {
+    "source_artifacts_available": true,
+    "source_08c_complete": true,
+    "integrity_passed": true,
+    "random_baseline_runs_available": true,
+    "baseline_summary_available": true,
+    "observed_vs_baseline_available": true,
+    "primary_table_available": true,
+    "primary_table_complete": true,
+    "primary_table_valid": true,
+    "domain_matched_control_available": true,
+    "domain_matched_control_complete": true,
+    "verdict_available": true,
+    "verdict_complete": true,
+    "report_saved": true,
+    "complete": true
+  }
+}

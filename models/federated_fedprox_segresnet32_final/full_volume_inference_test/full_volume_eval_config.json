@@ -1,0 +1,45 @@
+{
+  "project_root_hint": "/home/mandrakedrink/projects/research_ts_bs",
+  "manifest": "/home/mandrakedrink/projects/research_ts_bs/data/processed/manifest_4clients_seed42.csv",
+  "evaluation_split": "test",
+  "metrics_filename": "full_volume_test_metrics.csv",
+  "experiment_name": "FedProx SegResNet32 final CE-weighted \u2014 TEST",
+  "experiment_suffix": "fedprox_segresnet32_final_ceweighted_test",
+  "checkpoint": "models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt",
+  "save_dir": "models/federated_fedprox_segresnet32_final/full_volume_inference_test",
+  "model_name": "segresnet",
+  "model_kwargs": {
+    "spatial_dims": 3,
+    "in_channels": 4,
+    "out_channels": 4,
+    "init_filters": 32,
+    "blocks_down": [
+      1,
+      2,
+      2,
+      4
+    ],
+    "blocks_up": [
+      1,
+      1,
+      1
+    ],
+    "dropout_prob": 0.1
+  },
+  "baseline_name": "FedAvg SegResNet32 final CE-weighted \u2014 TEST",
+  "baseline_suffix": "fedavg_segresnet32_final_ceweighted_test",
+  "baseline_metrics": "models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+  "roi_size": [
+    128,
+    128,
+    128
+  ],
+  "sw_batch_size": 1,
+  "overlap": 0.5,
+  "visualize_tcga_lgg_worst_et_cases": true,
+  "n_visual_cases": 3,
+  "max_cases": null,
+  "print_checkpoint_metadata": true,
+  "checkpoint_abs": "/home/mandrakedrink/projects/research_ts_bs/notebooks/models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt",
+  "baseline_metrics_abs": "/home/mandrakedrink/projects/research_ts_bs/notebooks/models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv"
+}

@@ -1,0 +1,122 @@
+{
+  "cfg": {
+    "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+    "manifest": "/home/mandrakedrink/projects/research_ts_bs/data/processed/manifest_4clients_seed42.csv",
+    "split_filter": [
+      "test"
+    ],
+    "max_cases": null,
+    "analysis_name": "08c_predicted_mask_roi_embedding_retrieval_test",
+    "output_dir": "docs/08c_predicted_mask_roi_embedding_retrieval_test",
+    "patch_size": [
+      128,
+      128,
+      128
+    ],
+    "num_classes": 4,
+    "in_channels": 4,
+    "init_filters": 32,
+    "model_kwargs": {
+      "spatial_dims": 3,
+      "in_channels": 4,
+      "out_channels": 4,
+      "init_filters": 32,
+      "blocks_down": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "blocks_up": [
+        1,
+        1,
+        1
+      ],
+      "dropout_prob": 0.1
+    },
+    "sw_roi_size": [
+      128,
+      128,
+      128
+    ],
+    "sw_batch_size": 1,
+    "sw_overlap": 0.5,
+    "sw_mode": "gaussian",
+    "use_amp": true,
+    "roi_source": "predicted_wt_center",
+    "fallback_if_no_pred_wt": "image_foreground_center",
+    "allow_gt_fallback": false,
+    "embedding_method": "multiscale_gap_gmp",
+    "top_k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "retrieval_spaces": [
+      "embedding",
+      "pred_tumor_features",
+      "hybrid_pred_features"
+    ],
+    "pred_feature_weight": 0.25,
+    "reuse_existing_embeddings": false,
+    "save_predicted_masks_npz": false,
+    "gt_roi_08_table_dir": "docs/08_static_digital_twin_retrieval_test/tables",
+    "experiments": [
+      {
+        "key": "centralized_s32_cew",
+        "name": "Centralized SegResNet32 final CE-weighted — TEST",
+        "short_name": "Centralized-S32",
+        "checkpoint": "models/centralized_segresnet32_final/segresnet_final_best_mean_dice.pt",
+        "enabled": true
+      },
+      {
+        "key": "fedavg_s32_cew",
+        "name": "FedAvg SegResNet32 final CE-weighted — TEST",
+        "short_name": "FedAvg-S32",
+        "checkpoint": "models/federated_fedavg_segresnet32_final/fedavg_best_mean_dice.pt",
+        "enabled": true
+      },
+      {
+        "key": "fedprox_s32_cew",
+        "name": "FedProx SegResNet32 final CE-weighted — TEST",
+        "short_name": "FedProx-S32",
+        "checkpoint": "models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt",
+        "enabled": true
+      }
+    ],
+    "random_seed": 42,
+    "bootstrap_n": 1000
+  },
+  "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+  "output_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test",
+  "n_eval": 211,
+  "device": "cuda",
+  "use_amp": true,
+  "experiments": [
+    "centralized_s32_cew",
+    "fedavg_s32_cew",
+    "fedprox_s32_cew"
+  ],
+  "outputs": {
+    "tables": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/tables",
+    "embeddings": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/embeddings",
+    "figures": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/figures",
+    "reports": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/reports",
+    "logs": "/home/mandrakedrink/projects/research_ts_bs/docs/08c_predicted_mask_roi_embedding_retrieval_test/logs"
+  },
+  "checks": {
+    "test_split": true,
+    "gt_fallback_disabled": true,
+    "gt_fallback_not_used": true,
+    "features_complete": true,
+    "embeddings_complete": true,
+    "embedding_integrity": true,
+    "neighbors_available": true,
+    "overall_metrics_available": true,
+    "domain_metrics_available": true,
+    "roi_diagnostics_available": true,
+    "report_saved": true,
+    "complete": true
+  }
+}

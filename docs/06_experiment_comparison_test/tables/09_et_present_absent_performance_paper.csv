@@ -1,0 +1,7 @@
+experiment_key,experiment_name,experiment_short_name,gt_ET_present,n,ET Dice,Mean Dice,TC Dice,WT Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,False,3,0.3333,0.6639,0.7192,0.939
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,True,208,0.8818,0.909,0.9231,0.9221
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,False,3,0.3333,0.4484,0.0802,0.9318
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,True,208,0.8797,0.903,0.917,0.9124
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,False,3,0.3333,0.5297,0.3232,0.9326
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,True,208,0.8704,0.8965,0.9104,0.9087

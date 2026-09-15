@@ -1,0 +1,4 @@
+experiment_key,experiment_name,experiment_short_name,n_cases,n_gt_ET_present,n_gt_ET_absent,n_pred_ET_present,n_ET_false_positive,n_ET_false_negative_strict,n_ET_near_miss_low_pred_ratio,n_ET_overseg_ratio_flag,n_ET_low_dice,n_TC_low_dice,n_WT_low_dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,211,208,3,210,2,0,2,1,6,2,0
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,211,208,3,210,2,0,2,1,7,8,1
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,211,208,3,209,2,1,2,3,8,8,1

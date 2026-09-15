@@ -1,0 +1,13 @@
+experiment_key,experiment_name,experiment_short_name,client_domain,n_cases,n_gt_ET_present,n_gt_ET_absent,n_ET_false_positive,n_ET_false_negative_strict,n_ET_near_miss_low_pred_ratio,n_ET_overseg_ratio_flag,n_ET_low_dice,n_TC_low_dice,n_WT_low_dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,TCGA-GBM,20,20,0,0,0,0,0,0,0,0
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,TCGA-LGG,13,10,3,2,0,1,1,5,0,0
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,UCSF-PDGM,76,76,0,0,0,1,0,1,1,0
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,UPENN-GBM,102,102,0,0,0,0,0,0,1,0
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,TCGA-GBM,20,20,0,0,0,0,0,0,0,0
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,TCGA-LGG,13,10,3,2,0,1,1,5,6,0
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,UCSF-PDGM,76,76,0,0,0,1,0,1,1,1
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,UPENN-GBM,102,102,0,0,0,0,0,1,1,0
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,TCGA-GBM,20,20,0,0,0,0,1,1,0,0
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,TCGA-LGG,13,10,3,2,0,1,2,5,5,0
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,UCSF-PDGM,76,76,0,0,1,1,0,1,1,1
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,UPENN-GBM,102,102,0,0,0,0,0,1,2,0

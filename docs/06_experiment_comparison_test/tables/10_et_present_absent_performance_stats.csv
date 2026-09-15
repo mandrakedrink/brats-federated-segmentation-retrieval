@@ -1,0 +1,25 @@
+experiment_key,experiment_name,experiment_short_name,gt_ET_present,metric,n,mean,std,median,q1,q3,ci95_low,ci95_high,metric_label
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,False,dice_WT,3,0.939025,0.027508,0.950594,0.929108,0.954726,0.907622,0.958859,WT Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,True,dice_WT,208,0.922063,0.066329,0.942005,0.911382,0.963562,0.912824,0.930732,WT Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,False,dice_WT,3,0.931787,0.034948,0.947156,0.919473,0.951787,0.891789,0.956417,WT Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,True,dice_WT,208,0.912448,0.078996,0.934224,0.896619,0.958851,0.900824,0.922592,WT Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,False,dice_WT,3,0.932572,0.034119,0.945065,0.919516,0.951874,0.893967,0.958683,WT Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,True,dice_WT,208,0.908738,0.075484,0.931658,0.89222,0.956467,0.898071,0.918487,WT Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,False,dice_TC,3,0.719214,0.070903,0.756532,0.696989,0.760098,0.637446,0.763663,TC Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,True,dice_TC,208,0.923145,0.117014,0.961307,0.927078,0.978523,0.906418,0.937784,TC Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,False,dice_TC,3,0.080217,0.12172,0.020378,0.010189,0.120326,0.0,0.220274,TC Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,True,dice_TC,208,0.916959,0.133561,0.961128,0.922873,0.977809,0.898359,0.934061,TC Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,False,dice_TC,3,0.323188,0.423263,0.16727,0.083635,0.484782,0.0,0.802294,TC Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,True,dice_TC,208,0.910374,0.145062,0.95974,0.916223,0.977418,0.88969,0.92908,TC Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,False,dice_ET,3,0.333333,0.57735,0.0,0.0,0.5,0.0,1.0,ET Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,True,dice_ET,208,0.88182,0.140127,0.92568,0.872057,0.959068,0.862328,0.899791,ET Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,False,dice_ET,3,0.333333,0.57735,0.0,0.0,0.5,0.0,1.0,ET Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,True,dice_ET,208,0.879694,0.141912,0.92587,0.85961,0.953477,0.859897,0.898003,ET Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,False,dice_ET,3,0.333333,0.57735,0.0,0.0,0.5,0.0,1.0,ET Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,True,dice_ET,208,0.870415,0.153853,0.92281,0.853404,0.951827,0.84918,0.890198,ET Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,False,dice_mean,3,0.663857,0.210544,0.571797,0.54341,0.738275,0.515023,0.904752,Mean Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,True,dice_mean,208,0.909009,0.090228,0.940698,0.891113,0.963933,0.896523,0.920492,Mean Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,False,dice_mean,3,0.448446,0.17804,0.370688,0.346599,0.511413,0.322511,0.652139,Mean Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,True,dice_mean,208,0.903034,0.09282,0.935155,0.884315,0.961011,0.89012,0.915159,Mean Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,False,dice_mean,3,0.529698,0.156396,0.582453,0.468099,0.617674,0.353746,0.652894,Mean Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,True,dice_mean,208,0.896509,0.101432,0.937054,0.874843,0.958366,0.882472,0.909691,Mean Dice

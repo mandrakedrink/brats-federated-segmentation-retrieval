@@ -1,0 +1,295 @@
+{
+  "generated_at": "2026-09-15T03:38:56",
+  "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+  "output_root": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test",
+  "table_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables",
+  "figure_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures",
+  "report_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/reports",
+  "cfg": {
+    "project_root_hint": "/home/mandrakedrink/projects/research_ts_bs",
+    "manifest": "data/processed/manifest_4clients_seed42.csv",
+    "analysis_split": "test",
+    "output_root": "docs/06_experiment_comparison_test",
+    "tables_subdir": "tables",
+    "figures_subdir": "figures",
+    "reports_subdir": "reports",
+    "logs_subdir": "logs",
+    "strict_required": true,
+    "bootstrap_n": 5000,
+    "bootstrap_alpha": 0.05,
+    "bootstrap_seed": 42,
+    "small_et_threshold_vox": 1000,
+    "tiny_et_threshold_vox": 250,
+    "low_dice_threshold": 0.5,
+    "large_ratio_threshold": 3.0,
+    "small_ratio_threshold": 0.33,
+    "top_k_worst_cases": 15,
+    "save_png": true,
+    "save_pdf": true,
+    "dpi": 300,
+    "primary_reference_key": "centralized_s32_cew",
+    "primary_current_key": "fedavg_s32_cew",
+    "experiments": [
+      {
+        "key": "centralized_s32_cew",
+        "name": "Centralized SegResNet32 final CE-weighted — TEST",
+        "short_name": "C-S32 CEw",
+        "family": "centralized",
+        "stage": "final_backbone_test",
+        "enabled": true,
+        "required": true,
+        "metrics_path": "models/centralized_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "eval_config_path": "models/centralized_segresnet32_final/full_volume_inference_test/full_volume_eval_config.json",
+        "history_path_candidates": [
+          "models/centralized_segresnet32_final/history.csv",
+          "models/centralized_segresnet32_final/training_history.csv",
+          "models/centralized_segresnet32_final/centralized_history.csv",
+          "models/centralized_segresnet32_final/segresnet_final_history.csv"
+        ]
+      },
+      {
+        "key": "fedavg_s32_cew",
+        "name": "FedAvg SegResNet32 final CE-weighted — TEST",
+        "short_name": "FedAvg-S32 CEw",
+        "family": "federated",
+        "stage": "final_fedavg_test",
+        "enabled": true,
+        "required": true,
+        "metrics_path": "models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "eval_config_path": "models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_eval_config.json",
+        "train_config_path": "models/federated_fedavg_segresnet32_final/fedavg_final_config.json",
+        "history_path_candidates": [
+          "models/federated_fedavg_segresnet32_final/fedavg_history.csv",
+          "models/federated_fedavg_segresnet32_final/history.csv"
+        ]
+      },
+      {
+        "key": "fedprox_s32_cew",
+        "name": "FedProx SegResNet32 final CE-weighted — TEST",
+        "short_name": "FedProx-S32 CEw",
+        "family": "federated",
+        "stage": "final_fedprox_test",
+        "enabled": true,
+        "required": true,
+        "metrics_path": "models/federated_fedprox_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "eval_config_path": "models/federated_fedprox_segresnet32_final/full_volume_inference_test/full_volume_eval_config.json",
+        "train_config_path": "models/federated_fedprox_segresnet32_final/fedprox_final_config.json",
+        "history_path_candidates": [
+          "models/federated_fedprox_segresnet32_final/fedprox_history.csv",
+          "models/federated_fedprox_segresnet32_final/history.csv"
+        ]
+      },
+      {
+        "key": "centralized_v2_s16",
+        "name": "Centralized V2 SegResNet16 — TEST",
+        "short_name": "C-S16 V2",
+        "family": "centralized",
+        "stage": "historical_baseline_test",
+        "enabled": false,
+        "required": false,
+        "metrics_path": "models/centralized_baseline_v2/full_volume_inference_test/full_volume_test_metrics.csv",
+        "eval_config_path": "models/centralized_baseline_v2/full_volume_inference_test/full_volume_eval_config.json",
+        "history_path_candidates": [
+          "models/centralized_baseline_v2/history.csv",
+          "models/centralized_baseline_v2/training_history.csv",
+          "models/centralized_baseline_v2/centralized_history.csv"
+        ]
+      }
+    ]
+  },
+  "loaded_experiment_keys": [
+    "centralized_s32_cew",
+    "fedavg_s32_cew",
+    "fedprox_s32_cew"
+  ],
+  "primary_reference_key": "centralized_s32_cew",
+  "primary_current_key": "fedavg_s32_cew",
+  "n_all_metric_rows": 633,
+  "integrity_checks": [
+    {
+      "experiment_key": "centralized_s32_cew",
+      "experiment_name": "Centralized SegResNet32 final CE-weighted — TEST",
+      "n_rows": 211,
+      "n_unique_patients": 211,
+      "n_duplicate_rows": 0,
+      "expected_split": "test",
+      "observed_splits": "test",
+      "n_test_rows": 211,
+      "all_rows_are_expected_split": true,
+      "dice_min": 1.986097318374161e-10,
+      "dice_max": 1.0,
+      "min_volume_or_error": 0.0,
+      "n_domains": 4,
+      "domains": "TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"
+    },
+    {
+      "experiment_key": "fedavg_s32_cew",
+      "experiment_name": "FedAvg SegResNet32 final CE-weighted — TEST",
+      "n_rows": 211,
+      "n_unique_patients": 211,
+      "n_duplicate_rows": 0,
+      "expected_split": "test",
+      "observed_splits": "test",
+      "n_test_rows": 211,
+      "all_rows_are_expected_split": true,
+      "dice_min": 3.495892326394131e-11,
+      "dice_max": 1.0,
+      "min_volume_or_error": 0.0,
+      "n_domains": 4,
+      "domains": "TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"
+    },
+    {
+      "experiment_key": "fedprox_s32_cew",
+      "experiment_name": "FedProx SegResNet32 final CE-weighted — TEST",
+      "n_rows": 211,
+      "n_unique_patients": 211,
+      "n_duplicate_rows": 0,
+      "expected_split": "test",
+      "observed_splits": "test",
+      "n_test_rows": 211,
+      "all_rows_are_expected_split": true,
+      "dice_min": 3.495892326394131e-11,
+      "dice_max": 1.0,
+      "min_volume_or_error": 0.0,
+      "n_domains": 4,
+      "domains": "TCGA-GBM, TCGA-LGG, UCSF-PDGM, UPENN-GBM"
+    }
+  ],
+  "patient_set_alignment": [
+    {
+      "reference_key": "centralized_s32_cew",
+      "experiment_key": "centralized_s32_cew",
+      "n_reference": 211,
+      "n_experiment": 211,
+      "n_intersection": 211,
+      "n_missing_from_experiment": 0,
+      "n_extra_in_experiment": 0
+    },
+    {
+      "reference_key": "centralized_s32_cew",
+      "experiment_key": "fedavg_s32_cew",
+      "n_reference": 211,
+      "n_experiment": 211,
+      "n_intersection": 211,
+      "n_missing_from_experiment": 0,
+      "n_extra_in_experiment": 0
+    },
+    {
+      "reference_key": "centralized_s32_cew",
+      "experiment_key": "fedprox_s32_cew",
+      "n_reference": 211,
+      "n_experiment": 211,
+      "n_intersection": 211,
+      "n_missing_from_experiment": 0,
+      "n_extra_in_experiment": 0
+    }
+  ],
+  "figure_outputs": {
+    "01_overall_dice_by_experiment": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/01_overall_dice_by_experiment.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/01_overall_dice_by_experiment.pdf"
+    },
+    "02_domain_wt_dice": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_wt_dice.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_wt_dice.pdf"
+    },
+    "02_domain_tc_dice": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_tc_dice.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_tc_dice.pdf"
+    },
+    "02_domain_et_dice": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_et_dice.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_et_dice.pdf"
+    },
+    "02_domain_mean_dice": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_mean_dice.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/02_domain_mean_dice.pdf"
+    },
+    "03_primary_domain_delta_heatmap": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/03_primary_domain_delta_heatmap.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/03_primary_domain_delta_heatmap.pdf"
+    },
+    "04_case_delta_distribution_WT": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_WT.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_WT.pdf"
+    },
+    "04_case_delta_distribution_TC": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_TC.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_TC.pdf"
+    },
+    "04_case_delta_distribution_ET": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_ET.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_ET.pdf"
+    },
+    "04_case_delta_distribution_mean": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_mean.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/04_case_delta_distribution_mean.pdf"
+    },
+    "05_tcga_lgg_case_WT": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_WT.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_WT.pdf"
+    },
+    "05_tcga_lgg_case_TC": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_TC.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_TC.pdf"
+    },
+    "05_tcga_lgg_case_ET": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_ET.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/05_tcga_lgg_case_ET.pdf"
+    },
+    "06_fedavg_validation_dice_curves": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/06_fedavg_validation_dice_curves.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/06_fedavg_validation_dice_curves.pdf"
+    },
+    "07_fedavg_loss_curves": {
+      "png": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/07_fedavg_loss_curves.png",
+      "pdf": "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/figures/07_fedavg_loss_curves.pdf"
+    }
+  },
+  "tables_csv": [
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/00_manifest_split_domain_counts.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/00_manifest_test_domain_counts.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/01_experiment_registry.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/02_all_full_volume_metrics_long.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/03_integrity_checks.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/04_patient_set_alignment.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/05_overall_full_volume_performance_paper.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/06_overall_full_volume_performance_stats.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/07_domain_full_volume_performance_paper.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/08_domain_full_volume_performance_stats.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/09_et_present_absent_performance_paper.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/10_et_present_absent_performance_stats.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/11_et_volume_bin_performance_paper.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/12_et_volume_bin_performance_stats.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/13_domain_by_et_present_performance_paper.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/14_domain_by_et_present_performance_stats.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/15_failure_counts_overall.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/16_failure_counts_by_domain.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/17_volume_error_summary.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/18_pairwise_centralized_s32_cew_vs_fedavg_s32_cew_case_level.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/19_pairwise_centralized_s32_cew_vs_fedavg_s32_cew_delta_summary.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/20_pairwise_centralized_s32_cew_vs_fedavg_s32_cew_domain_delta_summary.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/21_tcga_lgg_deep_dive_centralized_s32_cew_vs_fedavg_s32_cew.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/22_tcga_lgg_all_experiments_case_rows.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_centralized_s32_cew_dice_ET.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_centralized_s32_cew_dice_TC.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_centralized_s32_cew_dice_WT.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedavg_s32_cew_dice_ET.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedavg_s32_cew_dice_TC.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedavg_s32_cew_dice_WT.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedprox_s32_cew_dice_ET.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedprox_s32_cew_dice_TC.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/23_worst_fedprox_s32_cew_dice_WT.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/24_worst_negative_delta_centralized_s32_cew_vs_fedavg_s32_cew_dice_ET.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/24_worst_negative_delta_centralized_s32_cew_vs_fedavg_s32_cew_dice_TC.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/24_worst_negative_delta_centralized_s32_cew_vs_fedavg_s32_cew_dice_WT.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/25_training_history_summary.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/26_training_histories_combined.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/27_output_checks.csv",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/tables/27_readiness_gate.csv"
+  ],
+  "reports": [
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/reports/06_computed_key_statements.md",
+    "/home/mandrakedrink/projects/research_ts_bs/docs/06_experiment_comparison_test/reports/06_experiment_comparison_report.md"
+  ]
+}

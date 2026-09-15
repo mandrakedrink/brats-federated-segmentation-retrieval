@@ -1,0 +1,10 @@
+experiment_key,retrieval_space,n,dim,finite
+centralized_s32_cew,embedding,211,960,True
+centralized_s32_cew,tumor_features,211,32,True
+centralized_s32_cew,hybrid,211,992,True
+fedavg_s32_cew,embedding,211,960,True
+fedavg_s32_cew,tumor_features,211,32,True
+fedavg_s32_cew,hybrid,211,992,True
+fedprox_s32_cew,embedding,211,960,True
+fedprox_s32_cew,tumor_features,211,32,True
+fedprox_s32_cew,hybrid,211,992,True

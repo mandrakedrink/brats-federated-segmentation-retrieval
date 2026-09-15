@@ -1,0 +1,5 @@
+k,effective_k_mean,effective_k_min,effective_k_max,n_queries_limited
+1,1.0,1,1,0
+3,3.0,3,3,0
+5,5.0,5,5,0
+10,10.0,10,10,0

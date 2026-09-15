@@ -1,0 +1,127 @@
+{
+  "notebook": "08_embedding_static_digital_twin_retrieval",
+  "project_root": "/home/mandrakedrink/projects/research_ts_bs",
+  "save_dir": "/home/mandrakedrink/projects/research_ts_bs/docs/08_static_digital_twin_retrieval_test",
+  "manifest": "/home/mandrakedrink/projects/research_ts_bs/data/processed/manifest_4clients_seed42.csv",
+  "cfg": {
+    "manifest": "/home/mandrakedrink/projects/research_ts_bs/data/processed/manifest_4clients_seed42.csv",
+    "use_numpy_cache_if_available": true,
+    "cache_manifest": "data/processed/npy_cache_float32/cache_manifest.csv",
+    "split_filter": [
+      "test"
+    ],
+    "restrict_to_common_metric_patients": true,
+    "max_cases": null,
+    "roi_source": "gt_wt_center",
+    "patch_size": [
+      128,
+      128,
+      128
+    ],
+    "embedding_method": "multiscale_gap_gmp",
+    "embedding_batch_size": 1,
+    "top_k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "retrieval_spaces": [
+      "embedding",
+      "tumor_features",
+      "hybrid"
+    ],
+    "hybrid_feature_weight": 0.25,
+    "example_query_ids": [
+      "BraTS2021_01477",
+      "BraTS2021_01491",
+      "BraTS2021_01513",
+      "BraTS2021_01527",
+      "BraTS2021_01528",
+      "BraTS2021_01531"
+    ],
+    "save_dir": "docs/08_static_digital_twin_retrieval_test",
+    "overwrite_embeddings": true,
+    "experiments": [
+      {
+        "key": "centralized_s32_cew",
+        "name": "Centralized SegResNet32 final CE-weighted \u2014 TEST",
+        "short_name": "Centralized-S32",
+        "family": "centralized",
+        "checkpoint": "models/centralized_segresnet32_final/segresnet_final_best_mean_dice.pt",
+        "metrics_path": "models/centralized_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "enabled": true,
+        "required": true
+      },
+      {
+        "key": "fedavg_s32_cew",
+        "name": "FedAvg SegResNet32 final CE-weighted \u2014 TEST",
+        "short_name": "FedAvg-S32",
+        "family": "federated",
+        "checkpoint": "models/federated_fedavg_segresnet32_final/fedavg_best_mean_dice.pt",
+        "metrics_path": "models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "enabled": true,
+        "required": true
+      },
+      {
+        "key": "fedprox_s32_cew",
+        "name": "FedProx SegResNet32 final CE-weighted \u2014 TEST",
+        "short_name": "FedProx-S32",
+        "family": "federated",
+        "checkpoint": "models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt",
+        "metrics_path": "models/federated_fedprox_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv",
+        "enabled": true,
+        "required": false
+      }
+    ],
+    "model_kwargs": {
+      "spatial_dims": 3,
+      "in_channels": 4,
+      "out_channels": 4,
+      "init_filters": 32,
+      "blocks_down": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "blocks_up": [
+        1,
+        1,
+        1
+      ],
+      "dropout_prob": 0.1
+    },
+    "make_figures": true,
+    "pca_components": 2,
+    "bootstrap_n": 1000,
+    "bootstrap_seed": 42
+  },
+  "n_eval_patients": 211,
+  "experiments": [
+    {
+      "key": "centralized_s32_cew",
+      "name": "Centralized SegResNet32 final CE-weighted \u2014 TEST",
+      "checkpoint": "/home/mandrakedrink/projects/research_ts_bs/models/centralized_segresnet32_final/segresnet_final_best_mean_dice.pt",
+      "metrics": "/home/mandrakedrink/projects/research_ts_bs/models/centralized_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv"
+    },
+    {
+      "key": "fedavg_s32_cew",
+      "name": "FedAvg SegResNet32 final CE-weighted \u2014 TEST",
+      "checkpoint": "/home/mandrakedrink/projects/research_ts_bs/models/federated_fedavg_segresnet32_final/fedavg_best_mean_dice.pt",
+      "metrics": "/home/mandrakedrink/projects/research_ts_bs/models/federated_fedavg_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv"
+    },
+    {
+      "key": "fedprox_s32_cew",
+      "name": "FedProx SegResNet32 final CE-weighted \u2014 TEST",
+      "checkpoint": "/home/mandrakedrink/projects/research_ts_bs/notebooks/models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt",
+      "metrics": "/home/mandrakedrink/projects/research_ts_bs/models/federated_fedprox_segresnet32_final/full_volume_inference_test/full_volume_test_metrics.csv"
+    }
+  ],
+  "outputs": {
+    "tables": "/home/mandrakedrink/projects/research_ts_bs/docs/08_static_digital_twin_retrieval_test/tables",
+    "embeddings": "/home/mandrakedrink/projects/research_ts_bs/docs/08_static_digital_twin_retrieval_test/embeddings",
+    "figures": "/home/mandrakedrink/projects/research_ts_bs/docs/08_static_digital_twin_retrieval_test/figures",
+    "reports": "/home/mandrakedrink/projects/research_ts_bs/docs/08_static_digital_twin_retrieval_test/reports"
+  }
+}

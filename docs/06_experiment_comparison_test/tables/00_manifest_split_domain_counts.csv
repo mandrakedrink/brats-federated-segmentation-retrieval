@@ -1,0 +1,13 @@
+client_domain,split,n
+TCGA-GBM,test,20
+TCGA-GBM,train,72
+TCGA-GBM,val,10
+TCGA-LGG,test,13
+TCGA-LGG,train,46
+TCGA-LGG,val,6
+UCSF-PDGM,test,76
+UCSF-PDGM,train,268
+UCSF-PDGM,val,38
+UPENN-GBM,test,102
+UPENN-GBM,train,358
+UPENN-GBM,val,51

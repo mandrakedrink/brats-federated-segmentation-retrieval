@@ -1,0 +1,4 @@
+experiment_key,n_cases,n_no_pred_wt,no_pred_wt_rate,mean_pred_to_gt_wt_center_distance,median_pred_to_gt_wt_center_distance,pred_WT_median,gt_WT_median,pred_ET_median,gt_ET_median
+centralized_s32_cew,211,0,0.0,1.9365097013798394,1.4142135623730951,93549.0,87527.0,16678.0,15058.0
+fedavg_s32_cew,211,0,0.0,2.4681516227495672,1.4142135623730951,92810.0,87527.0,16558.0,15058.0
+fedprox_s32_cew,211,0,0.0,2.530069777282294,1.4142135623730951,93863.0,87527.0,17015.0,15058.0

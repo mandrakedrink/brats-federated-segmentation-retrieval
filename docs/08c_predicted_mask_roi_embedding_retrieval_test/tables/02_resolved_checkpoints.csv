@@ -1,0 +1,4 @@
+key,name,checkpoint,checkpoint_resolved
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,models/centralized_segresnet32_final/segresnet_final_best_mean_dice.pt,/home/mandrakedrink/projects/research_ts_bs/models/centralized_segresnet32_final/segresnet_final_best_mean_dice.pt
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,models/federated_fedavg_segresnet32_final/fedavg_best_mean_dice.pt,/home/mandrakedrink/projects/research_ts_bs/models/federated_fedavg_segresnet32_final/fedavg_best_mean_dice.pt
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt,/home/mandrakedrink/projects/research_ts_bs/notebooks/models/federated_fedprox_segresnet32_final/fedprox_best_mean_dice.pt

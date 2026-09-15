@@ -1,0 +1,5 @@
+reference_key,current_key,metric,n,mean_delta_current_minus_reference,median_delta,std_delta,ci95_low,ci95_high,n_current_better,n_current_equal,n_current_worse,wilcoxon_pvalue_delta_vs_zero
+centralized_s32_cew,fedavg_s32_cew,dice_WT,211,-0.00958035,-0.00490415,0.04158999,-0.01597754,-0.0046007,68,0,143,0.0
+centralized_s32_cew,fedavg_s32_cew,dice_TC,211,-0.01518299,-0.00131473,0.10583615,-0.03060384,-0.00238543,78,0,133,0.00010549
+centralized_s32_cew,fedavg_s32_cew,dice_ET,211,-0.00209606,-0.00271914,0.035903,-0.00693707,0.00277799,65,1,145,2.55e-06
+centralized_s32_cew,fedavg_s32_cew,dice_mean,211,-0.00895313,-0.00361646,0.04170866,-0.01495889,-0.00362492,46,0,165,0.0

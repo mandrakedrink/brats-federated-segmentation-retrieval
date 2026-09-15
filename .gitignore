@@ -1,0 +1,94 @@
+# -----------------------------------------------------------------------------
+# Python / Jupyter
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# -----------------------------------------------------------------------------
+# Local data — BraTS / TCIA data must not be committed
+# -----------------------------------------------------------------------------
+data/*
+!data/.gitkeep
+!data/README.md
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+*.nrrd
+*.dcm
+
+# -----------------------------------------------------------------------------
+# Model checkpoints / large binary artifacts
+# Keep small JSON/CSV experiment metadata if useful, but not weights.
+# -----------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# -----------------------------------------------------------------------------
+# Generated caches and heavy visualization outputs
+# Curated GitHub figures belong in assets/readme/ and ARE tracked.
+# -----------------------------------------------------------------------------
+**/prediction_cache/
+**/cache/
+**/frames/
+**/videos/
+**/run_*/
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.gif
+!assets/readme/*.gif
+
+# Local experiment logs
+logs/*
+!logs/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Temporary / editor files
+# -----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Optional local environment files
+.env
+.env.*
+!.env.example

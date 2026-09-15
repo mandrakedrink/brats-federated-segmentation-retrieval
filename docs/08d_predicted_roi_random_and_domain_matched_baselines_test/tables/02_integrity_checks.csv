@@ -1,0 +1,18 @@
+check,passed,details
+eval_df_required_columns,True,
+features_df_required_columns,True,
+neighbors_df_required_columns,True,
+overall_metrics_df_required_columns,True,
+center_overall_df_required_columns,True,
+source_08c_complete,True,"columns=['complete', 'domain_metrics_available', 'embedding_integrity', 'embeddings_complete', 'features_complete', 'gt_fallback_disabled', 'gt_fallback_not_used', 'neighbors_available', 'overall_metrics_available', 'report_saved', 'roi_diagnostics_available', 'test_split']"
+source_08c_gt_fallback_disabled,True,True
+source_08c_gt_fallback_not_used,True,True
+split_is_test_only,True,['test']
+expected_n_cases,True,"observed=211, expected=211"
+features_patient_order_matches_eval,True,"features=211, eval=211"
+raw_feature_patient_order_matches_eval,True,"raw_features=211, eval=211"
+tumor_feature_z_shape_matches_eval,True,"(211, 34)"
+tumor_feature_z_all_finite,True,finite=True
+tumor_feature_z_l2_normalized,True,"mean_norm=1.000000, min=1.000000, max=1.000000"
+primary_embedding_k5_available,True,"space=embedding, k=5"
+no_pred_wt_fallback_in_08c,True,"[{'experiment_key': 'centralized_s32_cew', 'n_no_pred_wt': 0, 'no_pred_wt_rate': 0.0}, {'experiment_key': 'fedavg_s32_cew', 'n_no_pred_wt': 0, 'no_pred_wt_rate': 0.0}, {'experiment_key': 'fedprox_s32_cew', 'n_no_pred_wt': 0, 'no_pred_wt_rate': 0.0}]"

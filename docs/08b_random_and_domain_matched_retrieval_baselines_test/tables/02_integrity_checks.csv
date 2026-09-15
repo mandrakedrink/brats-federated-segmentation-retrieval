@@ -1,0 +1,10 @@
+check,passed,details
+eval_df_required_columns,True,
+features_df_required_columns,True,
+neighbors_df_required_columns,True,
+overall_metrics_df_required_columns,True,
+features_patient_order_matches_eval,True,"features=211, eval=211"
+raw_feature_patient_order_matches_eval,True,"raw_features=211, eval=211"
+tumor_feature_z_shape_matches_eval,True,"(211, 32)"
+tumor_feature_z_all_finite,True,
+requested_k_available,True,"available ranks: [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]..."

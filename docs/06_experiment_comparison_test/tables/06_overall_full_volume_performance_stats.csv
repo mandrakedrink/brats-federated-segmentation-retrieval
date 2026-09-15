@@ -1,0 +1,13 @@
+experiment_key,experiment_name,experiment_short_name,experiment_family,experiment_stage,metric,n,mean,std,median,q1,q3,ci95_low,ci95_high,metric_label
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,centralized,final_backbone_test,dice_WT,211,0.922304,0.065939,0.942458,0.911282,0.963422,0.913021,0.930889,WT Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,federated,final_fedavg_test,dice_WT,211,0.912723,0.078537,0.934425,0.896315,0.958798,0.901308,0.922562,WT Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,federated,final_fedprox_test,dice_WT,211,0.909077,0.07507,0.931765,0.893628,0.956472,0.89858,0.918629,WT Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,centralized,final_backbone_test,dice_TC,211,0.920246,0.118871,0.960633,0.922874,0.978388,0.903323,0.935233,TC Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,federated,final_fedavg_test,dice_TC,211,0.905063,0.166086,0.960031,0.922479,0.977722,0.881916,0.926553,TC Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,federated,final_fedprox_test,dice_TC,211,0.902026,0.165239,0.959387,0.911916,0.977323,0.879212,0.923513,TC Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,centralized,final_backbone_test,dice_ET,211,0.874022,0.163604,0.925678,0.871166,0.959069,0.850826,0.8954,ET Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,federated,final_fedavg_test,dice_ET,211,0.871926,0.165014,0.925267,0.85881,0.953786,0.84848,0.893112,ET Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,federated,final_fedprox_test,dice_ET,211,0.862779,0.174841,0.922275,0.852573,0.951852,0.838204,0.885602,ET Dice
+centralized_s32_cew,Centralized SegResNet32 final CE-weighted — TEST,C-S32 CEw,centralized,final_backbone_test,dice_mean,211,0.905524,0.096401,0.939295,0.889341,0.963906,0.892249,0.9179,Mean Dice
+fedavg_s32_cew,FedAvg SegResNet32 final CE-weighted — TEST,FedAvg-S32 CEw,federated,final_fedavg_test,dice_mean,211,0.896571,0.108187,0.934574,0.879288,0.960513,0.881793,0.910975,Mean Dice
+fedprox_s32_cew,FedProx SegResNet32 final CE-weighted — TEST,FedProx-S32 CEw,federated,final_fedprox_test,dice_mean,211,0.891294,0.110766,0.934,0.872455,0.958166,0.876471,0.906058,Mean Dice
